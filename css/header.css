@@ -1,0 +1,42 @@
+header {
+	border: 2px solid yellow;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+}
+
+header .logo {
+	font-size: 1.4em;
+}
+
+header a {
+	color: #fffff4;
+	text-decoration: none;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 80px;
+	padding: 0;
+}
+
+header nav ul li {
+	list-style: none;
+	border: red solid 2px;
+}
+
+@media screen and (max-width: 650px) {
+	header {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	header nav ul {
+		justify-content: space-between;
+	}
+}
