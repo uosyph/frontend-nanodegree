@@ -39,4 +39,23 @@ header nav ul li {
 	header nav ul {
 		justify-content: space-between;
 	}
+
+	header nav ul li {
+		width: 100%;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 350px) {
+	header nav ul {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		width: 100%;
+	}
+
+	header nav ul li {
+		width: 100%;
+		text-align: center;
+	}
 }
