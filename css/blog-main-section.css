@@ -1,0 +1,100 @@
+main {
+	/* border: 1px solid red; */
+
+	margin: 70px 150px;
+}
+
+/* ------------------- Author Section ------------------- */
+main .title {
+	/* border: 1px solid yellowgreen; */
+}
+
+main .author-info {
+	/* border: 1px solid blue; */
+	margin-block: 50px;
+}
+
+main .author-info {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+	grid-column-gap: 20px;
+	align-items: start;
+}
+
+main .author-info .avatar img {
+	border-radius: 50%;
+	width: 120px;
+	grid-row: span 2;
+}
+
+main .author-info .info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-top: 15px;
+	font-size: 0.9em;
+}
+
+main .author-info .info h2,
+main .author-info .info h3,
+main .author-info .info h4 {
+	margin: 0;
+}
+
+main .author-info .bio {
+	grid-column: 1 / -1;
+}
+
+main .separator {
+	background: rgb(18, 18, 18);
+	background: linear-gradient(
+		90deg,
+		rgba(18, 18, 18, 1) 18%,
+		rgba(95, 101, 97, 1) 33%,
+		rgba(202, 216, 207, 1) 50%,
+		rgba(136, 145, 139, 1) 67%,
+		rgba(18, 18, 18, 1) 82%
+	);
+}
+
+main .separator hr {
+	color: #00000000;
+}
+
+/* ------------------- Article Section ------------------- */
+main .article {
+	/* border: 1px solid burlywood; */
+	margin-block: 75px;
+}
+
+/* ------------------- Share Section ------------------- */
+main .share {
+	/* border: 1px solid blueviolet; */
+}
+
+main .share ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+	margin-inline: 160px;
+}
+
+main .share ul a {
+	color: #fffff4;
+	text-decoration: none;
+}
+
+main .share ul a:hover {
+	color: #ffffffb9;
+}
+
+main .share ul li {
+	list-style: none;
+}
+
+main .share ul li svg {
+	margin-left: 8px;
+	vertical-align: top;
+}
