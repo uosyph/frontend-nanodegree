@@ -17,6 +17,19 @@ main article img {
 	max-width: 100%;
 }
 
+main article a {
+	color: #fffff4;
+	text-decoration: none;
+}
+
+main article a:hover {
+	color: #ffffffb9;
+}
+
+main article a svg {
+	vertical-align: middle;
+}
+
 @media screen and (max-width: 900px) {
 	main {
 		grid-template-columns: repeat(2, 1fr);
