@@ -38,7 +38,7 @@
             </div>
 
             <p class="bio">
-               Just a guy who enjoys coding, learning, and nature.
+                Just a guy who enjoys coding, learning, and nature.
             </p>
         </section>
 
@@ -50,124 +50,200 @@
             <h2>
                 Introduction:
             </h2>
-            <p>
-                Have you ever wondered what happens behind the scenes when you type google.com in your browser and press
-                Enter?
+            <figure>
+                <figcaption>
+                    Have you ever wondered what happens behind the scenes when you type <q>google.com</q> in your
+                    browser and press
+                    Enter?
+                </figcaption>
                 <br>
-                The process may seem instantaneous, but a series of intricate steps take place to ensure that you can
-                access the desired website seamlessly.
+                <figcaption>
+                    The process may seem instantaneous, but a series of intricate steps take place to ensure that you
+                    can
+                    access the desired website seamlessly.
+                </figcaption>
                 <br>
-                In this blog post, we will dive deep into the technical journey your request takes, covering DNS
-                request, TCP/IP, firewall, HTTPS/SSL, load-balancer, web server, application server, and database.
-            </p>
+                <figcaption>
+                    In this blog post, we will dive deep into the technical journey your request takes, covering DNS
+                    request, TCP/IP, firewall, HTTPS/SSL, load-balancer, web server, application server, and database.
+                </figcaption>
+            </figure>
+
             <h3>
                 1. DNS Request:
             </h3>
-            <p>
-                As soon as you hit Enter, your browser initiates a Domain Name System (DNS) request. DNS acts as a
-                phonebook of the internet, converting the human-readable URL www.google.com into an IP address (e.g.,
-                216.58.207.46).
+            <figure>
+                <figcaption>
+                    As soon as you hit Enter, your browser initiates a Domain Name System (DNS) request. DNS acts as a
+                    phonebook of the internet, converting the human-readable URL www.google.com into an IP address
+                    (e.g.,
+                    216.58.207.46).
+                </figcaption>
                 <br>
-                The browser sends this request to a DNS resolver, typically provided by your Internet Service Provider
-                (ISP), which then searches for the IP address associated with www.google.com.
-            </p>
+                <figcaption>
+                    The browser sends this request to a DNS resolver, typically provided by your Internet Service
+                    Provider
+                    (ISP), which then searches for the IP address associated with www.google.com.
+                </figcaption>
+            </figure>
+
             <h3>
                 2. TCP/IP:
             </h3>
-            <p>
-                Once the DNS resolver retrieves the IP address, your browser establishes a Transmission Control Protocol
-                (TCP) connection with the server hosting the website.
+            <figure>
+                <figcaption>
+                    Once the DNS resolver retrieves the IP address, your browser establishes a Transmission Control
+                    Protocol
+                    (TCP) connection with the server hosting the website.
+                </figcaption>
                 <br>
-                TCP is responsible for ensuring reliable data transmission between your computer and the server.
+                <figcaption>
+                    TCP is responsible for ensuring reliable data transmission between your computer and the server.
+                </figcaption>
                 <br>
-                It breaks the data into packets, assigns sequence numbers, and manages retransmissions if any packet
-                gets lost or corrupted during transit.
-            </p>
+                <figcaption>
+                    It breaks the data into packets, assigns sequence numbers, and manages retransmissions if any packet
+                    gets lost or corrupted during transit.
+                </figcaption>
+            </figure>
+
             <h3>
                 3. Firewall:
             </h3>
-            <p>
-                Before the TCP connection is established, your request may encounter a firewall. Firewalls act as a
-                security barrier, monitoring and filtering incoming and outgoing network traffic based on predefined
-                rules.
+            <figure>
+                <figcaption>
+                    Before the TCP connection is established, your request may encounter a firewall. Firewalls act as a
+                    security barrier, monitoring and filtering incoming and outgoing network traffic based on predefined
+                    rules.
+                </figcaption>
                 <br>
-                They protect against unauthorized access and potential threats by examining the data packets and
-                determining whether they should be allowed or blocked.
-            </p>
+                <figcaption>
+                    They protect against unauthorized access and potential threats by examining the data packets and
+                    determining whether they should be allowed or blocked.
+                </figcaption>
+            </figure>
+
             <h3>
                 4. HTTPS/SSL:
             </h3>
-            <p>
-                Once the TCP connection is established, your browser initiates a secure Hypertext Transfer Protocol
-                (HTTPS) connection.
+            <figure>
+                <figcaption>
+                    Once the TCP connection is established, your browser initiates a secure Hypertext Transfer Protocol
+                    (HTTPS) connection.
+                </figcaption>
                 <br>
-                HTTPS uses the Secure Sockets Layer (SSL) or Transport Layer Security (TLS) protocol to encrypt the data
-                exchanged between your browser and the server.
+                <figcaption>
+                    HTTPS uses the Secure Sockets Layer (SSL) or Transport Layer Security (TLS) protocol to encrypt the
+                    data
+                    exchanged between your browser and the server.
+                </figcaption>
                 <br>
-                This encryption ensures that the information remains private and secure, preventing unauthorized
-                interception or tampering.
-            </p>
+                <figcaption>
+                    This encryption ensures that the information remains private and secure, preventing unauthorized
+                    interception or tampering.
+                </figcaption>
+            </figure>
+
             <h3>
                 5. Load-Balancer:
             </h3>
-            <p>
-                In the case of popular websites like Google, load-balancers play a crucial role.
+            <figure>
+                <figcaption>
+                    In the case of popular websites like Google, load-balancers play a crucial role.
+                </figcaption>
                 <br>
-                They distribute incoming requests across multiple servers to ensure optimal performance and prevent
-                overload on any single server.
+                <figcaption>
+                    They distribute incoming requests across multiple servers to ensure optimal performance and prevent
+                    overload on any single server.
+                </figcaption>
                 <br>
-                Load-balancers use various algorithms to determine the most suitable server to handle each request,
-                improving response times and overall user experience.
-            </p>
+                <figcaption>
+                    Load-balancers use various algorithms to determine the most suitable server to handle each request,
+                    improving response times and overall user experience.
+                </figcaption>
+            </figure>
+
             <h3>
                 6. Web Server:
             </h3>
-            <p>
-                Once the load-balancer forwards your request to an appropriate server, the web server comes into play.
+            <figure>
+                <figcaption>
+                    Once the load-balancer forwards your request to an appropriate server, the web server comes into
+                    play.
+                </figcaption>
                 <br>
-                The web server, such as Apache or Nginx, receives the request and retrieves the requested files or data
-                associated with <a href="https://www.google.com">https://www.google.com</a>. It then generates an
-                appropriate response, typically in the form
-                of a web page, and sends it back to your browser.
-            </p>
+                <figcaption>
+                    The web server, such as Apache or Nginx, receives the request and retrieves the requested files or
+                    data
+                    associated with <a href="https://www.google.com">https://www.google.com</a>. It then generates an
+                    appropriate response, typically in the form of a web page, and sends it back to your browser.
+                </figcaption>
+            </figure>
+
             <h3>
                 7. Application Server:
             </h3>
-            <p>
-                For dynamic websites or complex web applications, an application server may be involved.
+            <figure>
+                <figcaption>
+                    For dynamic websites or complex web applications, an application server may be involved.
+                </figcaption>
                 <br>
-                The application server handles the processing of dynamic content, such as executing server-side scripts
-                or interacting with databases.
+                <figcaption>
+                    The application server handles the processing of dynamic content, such as executing server-side
+                    scripts
+                    or interacting with databases.
+                </figcaption>
                 <br>
-                It generates the necessary data and sends it back to the web server, which then incorporates it into the
-                response sent to your browser.
-            </p>
-            <h3> 8. Database:
+                <figcaption>
+                    It generates the necessary data and sends it back to the web server, which then incorporates it into
+                    the
+                    response sent to your browser.
+                </figcaption>
+            </figure>
+
+            <h3>
+                8. Database:
             </h3>
-            <p>
-                Behind many websites lies a database that stores and manages vast amounts of information.
+            <figure>
+                <figcaption>
+                    Behind many websites lies a database that stores and manages vast amounts of information.
+                </figcaption>
                 <br>
-                When your request requires data from a database, the application server retrieves the relevant
-                information and includes it in the response sent back to your browser.
+                <figcaption>
+                    When your request requires data from a database, the application server retrieves the relevant
+                    information and includes it in the response sent back to your browser.
+                </figcaption>
                 <br>
-                This data could be search results, user profiles, or any other information required to fulfill your
-                request.
-            </p>
+                <figcaption>
+                    This data could be search results, user profiles, or any other information required to fulfill your
+                    request.
+                </figcaption>
+            </figure>
+
             <h2>
                 Conclusion:
             </h2>
-            <p>
-                The journey from typing <a href="https://www.google.com">https://www.google.com</a> in your browser to
-                the webpage appearing involves a
-                complex interplay of DNS requests, TCP/IP connections, firewalls, HTTPS/SSL encryption, load-balancers,
-                web servers, application servers, and databases.
-
-                Understanding the underlying processes helps us appreciate the intricate infrastructure that enables
-                seamless web browsing.
-
-                Next time you press Enter, take a moment to reflect on the remarkable journey your request embarks upon,
-                allowing you to access the vast realm of the internet.
-            </p>
+            <figure>
+                <figcaption>
+                    The journey from typing <a href="https://www.google.com">https://www.google.com</a> in your browser
+                    to
+                    the webpage appearing involves a
+                    complex interplay of DNS requests, TCP/IP connections, firewalls, HTTPS/SSL encryption,
+                    load-balancers,
+                    web servers, application servers, and databases.
+                </figcaption>
+                <br>
+                <figcaption>
+                    Understanding the underlying processes helps us appreciate the intricate infrastructure that enables
+                    seamless web browsing.
+                </figcaption>
+                <br>
+                <figcaption>
+                    Next time you press Enter, take a moment to reflect on the remarkable journey your request embarks
+                    upon,
+                    allowing you to access the vast realm of the internet.
+                </figcaption>
+            </figure>
         </section>
 
         <section class="share">
