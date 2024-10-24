@@ -52,14 +52,14 @@ const postData = async (url = '', info = {}) => {
 };
 
 
-// Function to GET project data and update the UI for the app
+// Function to retrieve project data and update the UI for the app
 const updateUI = async () => {
     const res = await fetch('http://localhost:3000/all');
 
     try {
         const data = await res.json();
 
-        // Get Elements of Entries in HTML by ID and update it in the app
+        // Retrieve elements of entries in DOM by ID and update their values
         document.getElementById('date').innerHTML = `Date:  ${data.date}`;
         document.getElementById('temp').innerHTML = `Temperature:  ${Math.round(data.temp)}&degF`;
         document.getElementById('content').innerHTML = `Your feeling today: ${data.content}`;
