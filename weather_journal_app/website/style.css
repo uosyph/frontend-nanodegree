@@ -168,7 +168,7 @@ button:hover {
 	}
 
 	.headline {
-		font-size: 32 px;
+		font-size: 32px;
 	}
 
 	input,
@@ -177,37 +177,33 @@ button:hover {
 		max-width: 100%;
 	}
 
-	.entry {
-		padding: 15 px;
-	}
-
 	.title {
-		font-size: 22 px;
+		font-size: 22px;
 	}
 }
 
 @media (max-width: 480px) {
 	.headline {
-		font-size: 28 px;
+		font-size: 28px;
 	}
 
 	input,
 	textarea,
 	button {
-		font-size: 16 px;
+		font-size: 16px;
 	}
 
 	.title {
-		font-size: 20 px;
+		font-size: 20px;
 	}
 
 	#date,
 	#temp,
 	#content {
-		font-size: 16 px;
+		font-size: 16px;
 	}
 
 	textarea {
-		height: 100 px;
+		height: 100px;
 	}
 }
