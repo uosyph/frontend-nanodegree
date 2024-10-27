@@ -1,17 +1,16 @@
-const dotenv = require('dotenv');
-const express = require('express');
-const cors = require('cors');
-const analyze = require('./analyze');
+import { config } from 'dotenv';
+import express, { json, urlencoded } from 'express';
+import cors from 'cors';
+import analyze from './analyze.js';
 
-dotenv.config();
+config();
 const api_key = process.env.API_KEY;
 
 const app = express();
 
 app.use(cors());
-app.use(express.static('dist'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(json());
+app.use(urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
     res.sendFile(path.resolve('dist/index.html'));

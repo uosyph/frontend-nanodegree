@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-module.exports = async (api_key, url) => {
+export default async (api_key, url) => {
     const host = 'https://api.meaningcloud.com';
     const parameters = `sentiment-2.1?key=${api_key}&url=${url}&model=general&lang=en`;
 
