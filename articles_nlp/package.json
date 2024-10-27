@@ -4,19 +4,32 @@
   "description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "node src/server/index.js",
-    "test": "jest"
+    "build-dev": "webpack-dev-server  --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "author": "Yousef Saeed",
   "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "cors": "^2.8.5",
+    "css-loader": "^6.10.0",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "sass": "^1.80.4",
-    "webpack": "^5.95.0",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.6.0",
+    "node-fetch": "^3.3.2",
+    "style-loader": "^3.3.4",
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "jest": "^29.7.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "webpack": "^5.90.3",
+    "webpack-dev-server": "^5.0.2",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }
