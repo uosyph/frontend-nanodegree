@@ -1,0 +1,22 @@
+{
+  "name": "articles_nlp",
+  "version": "1.0.0",
+  "description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "test": "jest"
+  },
+  "author": "Yousef Saeed",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "sass": "^1.80.4",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
