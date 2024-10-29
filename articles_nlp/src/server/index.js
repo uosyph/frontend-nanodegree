@@ -1,29 +1,30 @@
-import { config } from 'dotenv';
-import express, { json, urlencoded } from 'express';
-import cors from 'cors';
-import analyze from './analyze.js';
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const path = require('path');
 
-config();
+dotenv.config();
 const api_key = process.env.API_KEY;
 
 const app = express();
 
 app.use(cors());
-app.use(json());
-app.use(urlencoded({ extended: false }));
+app.use(express.static('dist'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     res.sendFile(path.resolve('dist/index.html'));
 });
 
-app.post('/', async (req, res) => {
+app.post('/analyze', async (req, res) => {
     const url = req.body.link;
-    let data = await analyze(api_key, url);
+    let data = await require('./analyze')(api_key, url);
     res.send(data);
 });
 
 const port = 3000;
 
 app.listen(port, function () {
-    console.log(`Server is listing on port: ${port}`);
+    console.log(`Server is listening on port: ${port}`);
 });
