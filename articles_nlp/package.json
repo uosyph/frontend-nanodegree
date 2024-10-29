@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "A web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
 		"start": "node src/server/index.js",
 		"dev": "nodemon src/server/index.js",
-		"build:dev": "node --openssl-legacy-provider ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.js",
-		"build:prod": "rm -rf dist && node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
+		"build-dev": "node --openssl-legacy-provider ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.js",
+		"build-prod": "rm -rf dist && node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js --config webpack.prod.js",
 		"test": "jest"
   },
   "author": "Yousef Saeed",
