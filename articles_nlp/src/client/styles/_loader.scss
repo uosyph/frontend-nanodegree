@@ -1,8 +1,8 @@
 @use 'variables';
 
 #loader {
-	border: 16px solid #f3f3f3;
-	border-top: 16px solid variables.$primary-color;
+	border: 16px solid variables.$primary-color;
+	border-top: 16px solid variables.$secondary-color;
 	border-radius: 50%;
 	width: 120px;
 	height: 120px;

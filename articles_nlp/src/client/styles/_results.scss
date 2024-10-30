@@ -4,7 +4,7 @@
 #results {
 	margin: 20px;
 	padding: 20px;
-	background-color: variables.$white;
+	background-color: variables.$secondary-background-color;
 	border-radius: 10px;
 	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
 

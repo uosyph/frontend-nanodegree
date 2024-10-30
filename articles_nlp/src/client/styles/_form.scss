@@ -10,7 +10,7 @@
 #article_url_form {
 	margin: 20px;
 	padding: 20px;
-	background-color: variables.$white;
+	background-color: variables.$secondary-background-color;
 	border-radius: 10px;
 	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
 	@include mixins.transition(background-color, 0.3s, ease);
@@ -37,8 +37,8 @@
 	}
 
 	button[type='submit'] {
-		background-color: variables.$primary-color;
-		color: variables.$white;
+		background-color: variables.$secondary-color;
+		color: variables.$primary-color;
 		padding: 10px 20px;
 		border: none;
 		border-radius: 5px;
@@ -46,7 +46,7 @@
 		@include mixins.transition(background-color, 0.3s, ease);
 
 		&:hover {
-			background-color: variables.$secondary-color;
+			opacity: 80%;
 		}
 	}
 }
