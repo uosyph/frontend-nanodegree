@@ -1,12 +1,22 @@
+import { isValidURI } from './uriValidator.js';
+
 document.getElementById("myForm").onsubmit = async function (event) {
     event.preventDefault();
+
+    const uri = document.getElementById("URI").value;
+
+    // Validate URI
+    if (!isValidURI(uri)) {
+        document.getElementById("error").innerText = "Please enter a valid URI.";
+        document.getElementById("error").style.display = "block";
+        return;
+    }
 
     // Show loader and hide previous results or errors
     document.getElementById("loader").style.display = "block";
     document.getElementById("error").style.display = "none";
     document.getElementById("results").style.display = "none";
 
-    const uri = document.getElementById("URI").value;
     try {
         const response = await fetch('/analyze', {
             method: 'POST',
@@ -31,5 +41,6 @@ document.getElementById("myForm").onsubmit = async function (event) {
     catch (error) {
         document.getElementById("error").innerText = "Error: " + error.message;
         document.getElementById("error").style.display = "block";
+        document.getElementById("loader").style.display = "none";
     }
 };

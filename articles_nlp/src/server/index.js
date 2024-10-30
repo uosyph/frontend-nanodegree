@@ -30,7 +30,7 @@ app.post('/analyze', async (req, res) => {
     return res.send({ sample: sample, code: code });
 });
 
-const port = 3000;
+const port = 3030;
 
 app.listen(port, function () {
     console.log(`Server is listening on port: ${port}`);
