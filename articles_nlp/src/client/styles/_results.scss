@@ -1,9 +1,12 @@
+@use 'variables';
+@use 'mixins';
+
 #results {
 	margin: 20px;
 	padding: 20px;
-	background-color: $white;
+	background-color: variables.$white;
 	border-radius: 10px;
-	@include box-shadow(0 0 10px $shadow-light);
+	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
 
 	h2 {
 		margin-top: 0;

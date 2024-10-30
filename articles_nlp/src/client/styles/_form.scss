@@ -1,3 +1,6 @@
+@use 'variables';
+@use 'mixins';
+
 .container {
 	max-width: 800px;
 	margin: 0 auto;
@@ -7,10 +10,10 @@
 #article_url_form {
 	margin: 20px;
 	padding: 20px;
-	background-color: $white;
+	background-color: variables.$white;
 	border-radius: 10px;
-	@include box-shadow(0 0 10px $shadow-light);
-	@include transition(background-color, 0.3s, ease);
+	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
+	@include mixins.transition(background-color, 0.3s, ease);
 
 	label {
 		display: block;
@@ -24,26 +27,26 @@
 		margin-bottom: 20px;
 		border-radius: 5px;
 		border: none;
-		@include box-shadow(0 0 5px $shadow-light);
-		@include transition(box-shadow, 0.3s, ease);
+		@include mixins.box-shadow(0 0 5px variables.$shadow-light);
+		@include mixins.transition(box-shadow, 0.3s, ease);
 
 		&:focus {
 			outline: none;
-			@include box-shadow(0 0 5px $shadow-dark);
+			@include mixins.box-shadow(0 0 5px variables.$shadow-dark);
 		}
 	}
 
 	button[type='submit'] {
-		background-color: $primary-color;
-		color: $white;
+		background-color: variables.$primary-color;
+		color: variables.$white;
 		padding: 10px 20px;
 		border: none;
 		border-radius: 5px;
 		cursor: pointer;
-		@include transition(background-color, 0.3s, ease);
+		@include mixins.transition(background-color, 0.3s, ease);
 
 		&:hover {
-			background-color: $secondary-color;
+			background-color: variables.$secondary-color;
 		}
 	}
 }

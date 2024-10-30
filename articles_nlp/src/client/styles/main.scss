@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'form';
-@import 'loader';
-@import 'error';
-@import 'results';
+@use 'variables';
+@use 'mixins';
+@use 'base';
+@use 'form';
+@use 'loader';
+@use 'error';
+@use 'results';

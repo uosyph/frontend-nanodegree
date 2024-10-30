@@ -1,10 +1,13 @@
+@use 'variables';
+@use 'mixins';
+
 #error {
-	@include box-shadow(0 0 10px $shadow-light);
+	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
 	margin: 20px;
 	padding: 20px;
 	border-radius: 10px;
-	background-color: $error-color;
-	color: $white;
+	background-color: variables.$error-color;
+	color: variables.$white;
 	font-weight: bold;
 	text-align: center;
 }
