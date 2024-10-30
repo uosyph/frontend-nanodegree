@@ -25,11 +25,11 @@ document.getElementById("myForm").onsubmit = async function (event) {
         document.getElementById("irony").innerText = `Irony: ${data.sample.irony}`;
         document.getElementById("score_tag").innerText = `Score Tag: ${data.sample.score_tag}`;
 
+        document.getElementById("loader").style.display = "none";
         document.getElementById("results").style.display = "block";
-    } catch (error) {
+    }
+    catch (error) {
         document.getElementById("error").innerText = "Error: " + error.message;
         document.getElementById("error").style.display = "block";
-    } finally {
-        document.getElementById("loader").style.display = "none";
     }
 };
