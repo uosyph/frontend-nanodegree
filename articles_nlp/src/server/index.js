@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.render("index.html");
 });
 
-app.post('/', async (req, res) => {
+app.post('/analyze', async (req, res) => {
     const url = req.body.URI;
     const analysis = await analyze(api_key, url);
     const { code, msg, sample } = analysis;

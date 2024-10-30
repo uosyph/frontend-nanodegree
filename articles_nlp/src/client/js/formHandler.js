@@ -1,30 +1,35 @@
-// Replace checkForName with a function that checks the URL
-import { checkForName } from './nameChecker'
-
-// If working on Udacity workspace, update this with the Server API URL e.g. `https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api`
-// const serverURL = 'https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api'
-const serverURL = 'https://localhost:8000/api'
-
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
+document.getElementById("myForm").onsubmit = async function (event) {
     event.preventDefault();
 
-    // Get the URL from the input field
-    const formText = document.getElementById('name').value;
+    // Show loader and hide previous results or errors
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("error").style.display = "none";
+    document.getElementById("results").style.display = "none";
 
-    // This is an example code that checks the submitted name. You may remove it from your code
-    checkForName(formText);
-    
-    // Check if the URL is valid
- 
-        // If the URL is valid, send it to the server using the serverURL constant above
-      
-}
+    const uri = document.getElementById("URI").value;
+    try {
+        const response = await fetch('/analyze', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ URI: uri })
+        });
 
-// Function to send data to the server
+        if (!response.ok) throw new Error("Failed to fetch analysis");
 
-// Export the handleSubmit function
-export { handleSubmit };
+        const data = await response.json();
+        document.getElementById("agreement").innerText = `Agreement: ${data.sample.agreement}`;
+        document.getElementById("subjectivity").innerText = `Subjectivity: ${data.sample.subjectivity}`;
+        document.getElementById("confidence").innerText = `Confidence: ${data.sample.confidence}`;
+        document.getElementById("irony").innerText = `Irony: ${data.sample.irony}`;
+        document.getElementById("score_tag").innerText = `Score Tag: ${data.sample.score_tag}`;
 
+        document.getElementById("results").style.display = "block";
+    } catch (error) {
+        document.getElementById("error").innerText = "Error: " + error.message;
+        document.getElementById("error").style.display = "block";
+    } finally {
+        document.getElementById("loader").style.display = "none";
+    }
+};

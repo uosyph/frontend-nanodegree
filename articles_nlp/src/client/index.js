@@ -1,9 +1,5 @@
-// js files
-import { handleSubmit } from './js/formHandler'
+// JS files
+import { handleSubmit } from "./js/formHandler";
 
-
-
-// alert("I EXIST")
-// console.log("CHANGE!!");
-
-// sass files
+// Sass files
+import("./styles/style.scss");
