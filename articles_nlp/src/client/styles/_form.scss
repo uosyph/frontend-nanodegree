@@ -1,0 +1,49 @@
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#article_url_form {
+	margin: 20px;
+	padding: 20px;
+	background-color: $white;
+	border-radius: 10px;
+	@include box-shadow(0 0 10px $shadow-light);
+	@include transition(background-color, 0.3s, ease);
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+
+	input[type='text'] {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		border: none;
+		@include box-shadow(0 0 5px $shadow-light);
+		@include transition(box-shadow, 0.3s, ease);
+
+		&:focus {
+			outline: none;
+			@include box-shadow(0 0 5px $shadow-dark);
+		}
+	}
+
+	button[type='submit'] {
+		background-color: $primary-color;
+		color: $white;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		@include transition(background-color, 0.3s, ease);
+
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+}
