@@ -1,6 +1,6 @@
 import { isValidURI } from './uriValidator.js';
 
-document.getElementById("myForm").onsubmit = async function (event) {
+document.getElementById("article_url_form").onsubmit = async function (event) {
     event.preventDefault();
 
     const uri = document.getElementById("URI").value;
