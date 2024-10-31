@@ -2,14 +2,17 @@
 @use 'mixins';
 
 .container {
-	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
 	margin: 0 auto;
-	padding: 20px;
+	margin-top: 50px;
 }
 
 #article_url_form {
+	font-size: 1.5em;
 	margin: 20px;
-	padding: 20px;
+	padding: 30px;
 	background-color: variables.$secondary-background-color;
 	border-radius: 10px;
 	@include mixins.box-shadow(0 0 10px variables.$shadow-light);
@@ -21,7 +24,8 @@
 		font-weight: bold;
 	}
 
-	input[type='text'] {
+	input {
+		font-size: .6em;
 		width: 100%;
 		padding: 10px;
 		margin-bottom: 20px;
@@ -38,7 +42,8 @@
 
 	button[type='submit'] {
 		background-color: variables.$secondary-color;
-		color: variables.$primary-color;
+		color: #fff;
+		font-weight: 600;
 		padding: 10px 20px;
 		border: none;
 		border-radius: 5px;
